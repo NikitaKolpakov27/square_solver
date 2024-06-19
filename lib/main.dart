@@ -58,20 +58,28 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
               'Решатор квадратного уравнения',
-              style: TextStyle(fontSize: 35),
+              style: TextStyle(fontSize: 24),
             ),
             const Divider(
               endIndent: double.infinity,
             ),
             Container(
               width: 200,
-              child: TextField(
-                textAlign: TextAlign.center,
-                onChanged: (value) => a = int.parse(value),
+              height: 75,
+              child: Column(
+                children: [
+                  const Text(
+                    'a:',
+                    style: TextStyle(color: Colors.purple, fontSize: 16),
+                  ),
+                  TextField(
+                    textAlign: TextAlign.center,
+                    onChanged: (value) => a = int.parse(value),
+                  ),
+                ],
               ),
             ),
             const Divider(
@@ -79,9 +87,18 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               width: 200,
-              child: TextField(
-                textAlign: TextAlign.center,
-                onChanged: (value) => b = int.parse(value),
+              height: 75,
+              child: Column(
+                children: [
+                  const Text(
+                    'b:',
+                    style: TextStyle(color: Colors.purple, fontSize: 16),
+                  ),
+                  TextField(
+                    textAlign: TextAlign.center,
+                    onChanged: (value) => b = int.parse(value),
+                  ),
+                ],
               ),
             ),
             const Divider(
@@ -89,9 +106,18 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               width: 200,
-              child: TextField(
-                textAlign: TextAlign.center,
-                onChanged: (value) => c = int.parse(value),
+              height: 75,
+              child: Column(
+                children: [
+                  const Text(
+                    'c:',
+                    style: TextStyle(color: Colors.purple, fontSize: 16),
+                  ),
+                  TextField(
+                    textAlign: TextAlign.center,
+                    onChanged: (value) => c = int.parse(value),
+                  ),
+                ],
               ),
             ),
             StoreConnector<AppState, AppState>(
